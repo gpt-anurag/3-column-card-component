@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+
+  --ff-lexent-deca: "Lexend Deca", sans-serif;
+  --ff-bsd: "Big Shoulders Display", cursive;
+}
+
+h2 {
+  font-family: var(--ff-bsd);
+  color: var(--light-gray);
+  font-size: 3rem;
+}
+
+p {
+  font-family: var(--ff-lexent-deca);
+  color: var(--transparent-white);
+  margin-bottom: 50px;
+  line-height: 1.8em;
+}
+
+.car-class {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 70px;
+}
+
+.sedan-sec {
+  background-color: var(--bright-orange);
+}
+.suv-sec {
+  background-color: var(--dark-cyan);
+}
+.luxury-sec {
+  background-color: var(--very-dark-cyan);
+}
+
+.sedan-sec > button {
+  color: var(--bright-orange);
+}
+.suv-sec > button {
+  color: var(--dark-cyan);
+}
+.luxury-sec > button {
+  color: var(--very-dark-cyan);
+}
+
+button {
+  border: none;
+  font-family: var(--ff-lexent-deca);
+  padding: 15px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-component {
+  display: flex;
+  height: 500px;
+  max-width: 900px;
+}
+
+.sedan-sec {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.luxury-sec {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+@media screen and (max-width: 955px) {
+  .card-component {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 350px;
+  }
+
+  main {
+    margin-top: 250px;
+    margin-bottom: 250px;
+  }
+
+  .car-class {
+    height: 450px;
+  }
+
+  .car-class > img,
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .car-class > p {
+    margin-bottom: 40px;
+  }
+
+  .sedan-sec {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .luxury-sec {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0px;
+  }
+}
